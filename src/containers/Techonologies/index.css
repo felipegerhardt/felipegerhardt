@@ -27,5 +27,8 @@
 @media screen and (max-width: 490px) {
   .section__header {
     margin-left: 5vmax;}
+  .tech__container{
+    padding-bottom: 100px;
+  }
 
 }
