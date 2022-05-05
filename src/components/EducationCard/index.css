@@ -67,4 +67,8 @@
     width: 40vmax;
   }
   
+  .education__text {
+    font-size: 14px;
+  }
+  
 }
