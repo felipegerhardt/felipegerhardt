@@ -45,6 +45,7 @@ const Projects = () => {
 
             {/* Unefficient coding below */}
             
+            
             {project.name === "L-earn" 
             ? 
             <div className='image__container'>
