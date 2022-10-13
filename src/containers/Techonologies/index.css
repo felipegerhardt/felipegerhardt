@@ -2,7 +2,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  background-image: linear-gradient(#000000, #002035);
+  background-image: linear-gradient(#000000, rgba(13, 218, 23, 0.1));
 }
 
 .cardContainer {

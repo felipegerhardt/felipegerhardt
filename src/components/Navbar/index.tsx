@@ -5,10 +5,7 @@ import {ToastContainer} from 'material-react-toastify';
 import 'material-react-toastify/dist/ReactToastify.css';
 
 
-// classnames are named as BEM (block element modifier) convention
-
-
-const links = ['About me', 'Technologies', 'Projects', 'Experiences', 'Education']
+const links = ['About me', 'Technologies', 'Projects', 'Experiences', 'Education'];
 
 const Navbar = () => {
 
@@ -20,9 +17,8 @@ const Navbar = () => {
   useEffect(() => {
     
     const changeBackground = () => {
-      if ( window.scrollY >= 20 ) {
+      if ( window.scrollY >= 40 ) {
         setNavbar(true);
-        console.log(navbar);
       } else {
         setNavbar(false);
       }
@@ -40,7 +36,7 @@ const Navbar = () => {
     <>
     
     <div className={ navbar ? "navbarcontainer active" : "navbarcontainer" }>
-      <p className='FG'><a href='#About me'>FG</a></p>
+      <p className='FG'>FG</p>
       <div className="rightSideButtons">
         {links.map((myList, index) => <a href={`#${myList}`} className='ListButtons' key={index}>{myList}</a>)}
       </div>

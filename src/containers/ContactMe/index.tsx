@@ -1,16 +1,22 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import './index.css';
-import {toast} from 'material-react-toastify';
+import { toast } from 'material-react-toastify';
+import { Blocks } from 'react-loader-spinner';
+import { BiMailSend } from 'react-icons/bi';
+import { AiOutlineRedo } from 'react-icons/ai';
 
 import EmailJS from '../../utils';
 
 
 const ContactMe = () => {
 
+  const [sending, setSending] = useState(false);
+
   const [params, setParams] = useState({
     name: '',
     email: '',
     message: '',
+    sendingState: setSending,
   })
 
   function handlingCallback (params:any) {
@@ -41,8 +47,34 @@ const ContactMe = () => {
           onChange={(e) => setParams({...params, message: e.target.value})}/>
         
         <div className='contact__buttons__container'>
-          <button className='contact__buttons' onClick={() => handlingCallback(params)}> <p>Send</p> </button>
-          <button className='contact__buttons' onClick={() => setParams({name: '', email: '', message:''})}> <p>Reset</p> </button>
+          
+          <button className='contact__buttons' onClick={() => handlingCallback(params)}>
+            
+            {sending ? 
+            
+            <Blocks
+              visible={true}
+              height="25"
+              width="25"
+              ariaLabel="blocks-loading"
+              wrapperClass="blocks-wrapper"
+            />
+
+            : 
+            <BiMailSend color='white' className='button-icon' size={23}/>
+            } 
+            <p>Send</p> 
+
+          </button>
+          
+          <div className='contact__buttons' 
+            onClick={() => setParams({name: '', email: '', message:'', sendingState:setSending})}>
+            
+            <AiOutlineRedo color='white' className='button-icon reset' size={23}/>
+
+            <p>Reset</p> 
+          </div>
+
         </div>
       
       </div>

@@ -3,7 +3,7 @@
   flex-direction: column;
   width: 100%;
   font-family: 'Poppins', sans-serif;
-  background-image: linear-gradient(rgba(10,10,10,0.73), rgba(0,0,0,1));
+  background-image: linear-gradient(rgba(13, 218, 23, 0.1), rgba(0,0,0,1));
   align-self: center;
 }
 

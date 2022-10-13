@@ -9,7 +9,7 @@ const technologies = [
   {name:'React.js',
   id:'RJ',
   icon: '',
-  text: '1 year of React.js experience. Click on this card to judge my coding skills.', 
+  text: '2 years of React.js experience. Click on this card to judge my coding skills.', 
   url: 'https://github.com/felipegerhardt/felipegerhardt'},
 
   {name:'React Native',

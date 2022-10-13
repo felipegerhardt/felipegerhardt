@@ -1,7 +1,7 @@
 .contact__container {
   width: 100%;
   font-family: 'Poppins', sans-serif;
-  background-image: linear-gradient( rgb(0, 12, 20), rgb(0, 32, 53, 1));
+  background-image: linear-gradient( rgba(13, 218, 23, 0.1), rgba(13, 218, 23, 0.404));
 }
 
 .textInput__container {
@@ -40,17 +40,22 @@
 .contact__buttons__container{
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
   }
 
 .contact__buttons__container > * {
   margin: 10px;
 }
-
+.blocks-wrapper {
+  margin-right: 5px;
+}
 .contact__buttons {
   flex:1;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
   cursor: pointer;
   outline: none;
   border: none;
@@ -61,15 +66,13 @@
   font-size: 18px;
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
-  background-color: #0292be;
+  background-color: rgba(9, 255, 0, 0.3);
+  text-shadow: 0 0 2px white;
+  box-shadow: 0 0 5px white;
   color: white;
-  transition: all 500ms ease;
 
 }
 
-.contact__buttons:hover {
-  background-color: #025169;
-}
 
 .Footer__container{
   width: 100%;
@@ -81,6 +84,18 @@
   font-weight: 200;
   margin-top: 6vmax;
 }
+
+.button-icon {
+  margin-right: 10px;
+}
+
+.contact__buttons:hover > .button-icon.reset { animation: spin ease-in-out 1s }
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
 
 @media screen and (max-width: 750px) {
 
@@ -113,11 +128,5 @@
   .textMessage{
     width: 100%;
     font-size: 15px;
-  }
-  
-  .contact__buttons__container{
-    flex-direction: column;
-    width: 100%;
-    
   }
 }

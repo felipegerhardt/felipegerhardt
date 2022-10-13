@@ -1,12 +1,10 @@
 .about_me__container {
-  width: 100%;
-  font-family: 'Poppins', sans-serif;
-  justify-items: center;
-  align-items: center;
   display: flex;
   flex-direction: column;
-  background-color: rgb(0,0,0,0.73);
-  position: absolute;
+  justify-items: center;
+  align-items: center;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
 }
 .name__social__media {
   display: flex;
@@ -53,14 +51,36 @@
   color:white;
   font-size: 22px;
   margin-top: 4vmax;
+  word-spacing: 4px;
+  margin-bottom: 18px;
 }
 
-.text {
+.dynamic-text-container {
+  display: flex;
+  flex-direction: column;
   margin-top: 2vmax;
+  color: white;
   font-size: 16px;
   font-weight: 300;
   color:white;
+  word-spacing: 4px;
+
 }
+.ILove {
+  display:flex;
+  flex-direction: row;
+  padding-top: 14px;
+}
+
+.text {
+  font-size: 16px;
+  font-weight: 300;
+  color:white;
+  word-spacing: 4px;
+  letter-spacing: 1px;
+  line-height: 2.5;
+}
+
 @media screen and (max-width: 750px) {
   .name{
     color: white;
