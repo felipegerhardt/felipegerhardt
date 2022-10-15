@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import './index.css';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
+
 import MovingComponent from 'react-moving-text';
 
 
@@ -22,6 +23,7 @@ const AboutMe = () =>  {
     <div className="about_me__container">
       <div className="name__social__media">
         <p id='About me' className='name'>FELIPE GERHARDT</p>
+        
           <div className='social__media__container'>
             <button className='icons__button'><FaGithub size={25} color='white' className='social__media' onClick={() => window.open('https://github.com/felipegerhardt/')}/></button>
             <button className='icons__button'><FaLinkedin size={25} color='white' className='social__media' onClick={() => window.open('https://www.linkedin.com/in/felipelcgerhardt/')}/></button>

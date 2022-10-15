@@ -86,8 +86,9 @@
 }
 
 .ListButtons {
-  padding-left: 2vmax;
-  padding-right: 2vmax;
+  padding:5px;
+  margin-left: 5px;
+  margin-right: 5px;
   white-space: nowrap;
   box-shadow: inset 0 0 0 0 rgba(9, 255, 0, 0.842);
   color: white;
@@ -99,6 +100,10 @@
   color: white;
   text-shadow: 0 0 3px white;
   
+}
+.ListButtons.sm {
+  transition: none;
+  box-shadow: none;
 }
 
 .menu__icon {
@@ -129,32 +134,20 @@
 }
 
 .gpt3__navbar-menu_container {
-  position: absolute;
-  top: 3vmax;
-  right: 0;
-  margin-top: 3rem;
-  min-width: 4vmax;
-  border-radius: 5px;
-  box-shadow: 1 1 5 rgba(0,0,0,0.3);
-  text-align: end;
   display: flex;
   flex-direction: column;
-  width: 13rem;
-  justify-content: flex-end;
-  align-items: flex-end;
+  position: absolute;
+  justify-content: flex-center;
+  align-items: flex-center;
   align-content: center;
-  background-image: linear-gradient(rgb(58, 129, 191, 0.28), rgb(65, 48, 90, 0.28));
-  margin-left: 2rem;
-  margin-right: 2rem;
-  border-radius: 40px;
+  border-radius: 10px;
   border: 0.5px solid;
+  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.3));
   box-shadow: -1px 1px 1px #3A81BF, 1px -1px 1px #41305A, 1px 1px 1px green;
-  padding: 10px;
-  transition: all 250ms;
   cursor: pointer;
   backdrop-filter: blur(5px);
-}
 
+}
 
 .gpt3__navbar-menu_container-links {
   display: none;
@@ -168,6 +161,7 @@
     display: flex;
     align-self: center;
     margin-right: 8vmax;
+    cursor: pointer;
   }
   
   .ContactMeButton {
@@ -176,6 +170,10 @@
   }
   .gpt3__navbar-menu_container-links-sign {
     display: block
+  }
+  
+  .ListButtons {
+    font-size: 13px;
   }
   
 }
@@ -193,6 +191,7 @@
     display: flex;
     align-self: center;
     margin-right: 5vmax;
+    cursor: pointer;
   }
   .rightSideButtons{
     display: none

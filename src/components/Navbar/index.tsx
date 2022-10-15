@@ -1,17 +1,46 @@
 import React, { useState, useEffect } from 'react';
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
 import './index.css';
-import {ToastContainer} from 'material-react-toastify';
+import { ToastContainer } from 'material-react-toastify';
 import 'material-react-toastify/dist/ReactToastify.css';
-
+import { useTransition, animated } from 'react-spring';
 
 const links = ['About me', 'Technologies', 'Projects', 'Experiences', 'Education'];
 
 const Navbar = () => {
 
-  const [toggleMenu, setToggleMenu] = useState<boolean>(false)
+  const [dimensions, setDimensions] = useState({
+    height: "",
+    width: ""
+  });
+
+  useEffect(() => {
+    setDimensions({
+      height: window.innerHeight.toString(),
+      width: window.innerWidth.toString()
+    });
+
+    function handleResize() {
+      setDimensions({
+        height: window.innerHeight.toString(),
+        width: window.innerWidth.toString()
+      });
+    }
+    window.addEventListener("resize", handleResize);
+  }, []);
+
+
+  const [toggleMenu, setToggleMenu] = useState(false)
+  const transition = useTransition(toggleMenu, {
+    from: {x: 250, y: 60, opacity: 0, scale: 0.1},
+    enter: {x: -20, y: 60, opacity: 1, scale: 1.1},
+    leave: {x: 250, y: 60, opacity: 0, scale: 0.1},
+  })
   
   const [navbar, setNavbar] = useState(false);
+  var state = {
+    display: true,
+  };
 
 
   useEffect(() => {
@@ -42,20 +71,25 @@ const Navbar = () => {
       </div>
 
       <div className='menu__container'>
-        {toggleMenu ?
+        
+        
+        {toggleMenu  ?
           <RiCloseLine className='menu__icon' color='#fff' size={27} onClick={() => setToggleMenu(false)}/>
           : 
-          <RiMenu3Line className='menu__icon' color='#fff' size={27} onClick={() => setToggleMenu(true)}/>
+          <RiMenu3Line className='menu__icon' color='#fff' size={27} onClick={() => setToggleMenu(true)}
+          />
           }
-
-          {toggleMenu && (
-            <div className='gpt3__navbar-menu_container scale-up-center'>
+        
+          {transition((style, item) =>
+            item && parseInt(dimensions.width) < 750  ? 
+            
+            <animated.div style={style} className='gpt3__navbar-menu_container' >
               <div className='gpt3__navbar-menu-container-links'>
-                {links.map((myList, index) => <a href={`#${myList}`} className='ListButtons' key={index}  onClick={() => setToggleMenu(false)}>{myList}</a>)}
-                <a href='#ContactMe' className='ListButtons'>Contact me</a>
+                {links.map((myList, index) => <a href={`#${myList}`} className='ListButtons sm' key={index}  onClick={() => setToggleMenu(false)}>{myList}</a>)}
+                <a onClick={() => setToggleMenu(false)} href='#ContactMe' className='ListButtons sm'>Contact me</a>
               </div>
-            </div>
-          )}
+            </animated.div> : null
+            )}
       </div>
 
       <button className='ContactMeButton'>
