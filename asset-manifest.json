@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/felipegerhardt/static/css/main.c6fb8a14.css",
-    "main.js": "/felipegerhardt/static/js/main.e433fb48.js",
+    "main.css": "/felipegerhardt/static/css/main.6b0d5bc3.css",
+    "main.js": "/felipegerhardt/static/js/main.a9094c27.js",
     "static/media/learn_ss2.jpg": "/felipegerhardt/static/media/learn_ss2.7d2108c86faeecd6b2a5.jpg",
     "static/media/learn_ss1.jpg": "/felipegerhardt/static/media/learn_ss1.a6585a519e80c3e4ae4f.jpg",
     "static/media/KOSR_gif2.gif": "/felipegerhardt/static/media/KOSR_gif2.fdb95517b44dcf842cc2.gif",
@@ -15,11 +15,11 @@
     "static/media/PY.svg": "/felipegerhardt/static/media/PY.7888f47c0340e4a2f23a.svg",
     "static/media/RN.svg": "/felipegerhardt/static/media/RN.4f7b7e3577cb127da4e3.svg",
     "index.html": "/felipegerhardt/index.html",
-    "main.c6fb8a14.css.map": "/felipegerhardt/static/css/main.c6fb8a14.css.map",
-    "main.e433fb48.js.map": "/felipegerhardt/static/js/main.e433fb48.js.map"
+    "main.6b0d5bc3.css.map": "/felipegerhardt/static/css/main.6b0d5bc3.css.map",
+    "main.a9094c27.js.map": "/felipegerhardt/static/js/main.a9094c27.js.map"
   },
   "entrypoints": [
-    "static/css/main.c6fb8a14.css",
-    "static/js/main.e433fb48.js"
+    "static/css/main.6b0d5bc3.css",
+    "static/js/main.a9094c27.js"
   ]
 }
