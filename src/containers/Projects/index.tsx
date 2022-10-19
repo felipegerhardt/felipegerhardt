@@ -7,19 +7,38 @@ import 'aos/dist/aos.css'; // You can also use <link> for styles
 
 const projects = [
   {name: 'Unlock',
-  about: 'Unlock is an NFT marketplace on Polygon blockchain using ERC-721 standard',
+  about: <>
+    <p> Unlock is a NFT Marketplace being developed by me and my partner
+    <br/>
+    <br/> <p style={{fontWeight: 'bold'}}>Some details about the project:</p>
+    <br/> • The marketplace will sell utility features for NFTs
+    <br/> • Smart contracts were developed using Solidity
+    <br/> • We use Polygon blockchain for the low fee gas
+    <br/> • We are currently looking for angel investors</p></>,
   images: [require('../../assets/Unlock.png')],
   duration: 'Apr/2022 - Present',
   url: 'https://www.figma.com/proto/Gi3d8w4V8tCzeSVRIbH52V/MVP?node-id=237%3A1280&scaling=scale-down-width&page-id=0%3A1&starting-point-node-id=237%3A1280&hide-ui=1'},
 
   {name: 'L-earn',
-  about: 'L-earn is a gamified learning platform that connects tutors to students with goals and tutoring subjects well specified in an On Demand platform. Framework React Native',
+  about: <>
+    <p> L-earn is a gamified learning platform that connects tutors to students with goals and tutoring subjects well specified in an On Demand platform. The framework is React Native
+    <br/>
+    <br/> <p style={{fontWeight: 'bold'}}>What I have learned with this project:</p>
+    <br/> • How to build a mobile app with Expo
+    <br/> • React Native framework
+    <br/> • Basic backend on Google Firebase</p></>,
   images: [require('../../assets/learn_ss1.jpg'), require('../../assets/learn_ss2.jpg')],
   duration: 'Aug/2021 - Present',
   url: 'https://github.com/felipegerhardt/Learn.public',
   }, 
   {name: 'Kinematics of a space robot',
-  about: 'In this repo I analyzed the kinematics of a space robot under different gravity conditions with Sympy, Scipy, Numpy and Pydy Python libraries.',
+  about: <>
+  <p> In this repo I analyzed the kinematics of a space robot under different gravity conditions using the Python libraries Sympy, Scipy, Numpy and Pydy.
+  <br/>
+  <br/> <p style={{fontWeight: 'bold'}}>What I have learned with this project:</p>
+  <br/> • Using simulation and algebric libraries such as Sympy, SciPy and PyDy 
+  <br/> • The main aspects of Object Oriented Programming
+  <br/> • How to perform 3D dynamic simulations </p></>,
   images: [require('../../assets/KOSR.png'), require('../../assets/KOSR_gif1.gif'), require('../../assets/KOSR_gif2.gif')],
   duration: 'Jan/2021 - Mar/2021',
   url: 'https://github.com/felipegerhardt/kinematics-of-a-space-robot'

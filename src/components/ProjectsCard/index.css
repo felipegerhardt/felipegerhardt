@@ -24,6 +24,7 @@
   font-size: 26px;
   align-self: center;
   color: white;
+  width: 100%;
 }
 
 .text__project__card {
@@ -32,12 +33,14 @@
   margin-top: 3vmax;
   align-self: center;
   color: white;
+  width: 100%;
 }
 
 .text__duration{
   color: white;
   font-size: 16px;
   margin-top: 2vmax;
+  width: 100%;
 }
 
 @media screen and (max-width: 1050px) {

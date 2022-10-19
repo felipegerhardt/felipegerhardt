@@ -31,16 +31,16 @@ const AboutMe = () =>  {
       </div>
       <div className="welcome__container">
         
-        <p className='welcome'>Welcome to my profile,</p>
+        <p className='welcome'>Welcome to my profile</p>
 
         <p className='text'>
-          I am a brazilian software developer here in Canada.
+          I am a Brazilian software developer here in Canada.
         </p>
         <p className='text'>
           My interest in programming started in 2018, when I wanted to understand how to perform AI predictions. 
-          I learned Python on the next year then I realized that I needed to create a platform to apply what I have learned.
+          I learned Python in the next year then I realized that I needed to create a platform to apply what I have learned.
           After almost 1 year struggling with Kivy/KivyMD framework, I finally switched to React Native.
-          Nowadays I'm focusing my career in front-end React.js and React Native based applications. 
+          Nowadays I'm focusing my career on front-end React.js and React Native based applications. 
         </p>
 
         <div className="dynamic-text-container">
