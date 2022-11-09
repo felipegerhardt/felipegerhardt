@@ -44,7 +44,8 @@ const Education = () => {
       <p data-aos="fade" className='section__header' id='Education'>Education</p>
       <div data-aos="fade" className='education__card__container'>
         {education.map((education) => 
-        <EducationCard education={education} />
+        <EducationCard name={education.name} course={education.course} location={education.location}
+          GPA={education.GPA} acc={education.acc} url={education.url} duration={education.duration} />
         )}
       </div>      
     </div>

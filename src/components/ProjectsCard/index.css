@@ -4,7 +4,7 @@
   width: 47vmax;
   align-self: center;
   align-content: center;
-  background-image: linear-gradient(rgb(58, 129, 191, 0.08), rgb(65, 48, 90, 0.08));
+  background-image: linear-gradient(rgba(191, 58, 58, 0.08), rgb(65, 48, 90, 0.08));
   margin-left: 2vmax;
   margin-right: 2vmax;
   border-radius: 40px;

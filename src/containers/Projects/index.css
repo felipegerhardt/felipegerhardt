@@ -26,11 +26,15 @@
   left: 0; top: 0
 }
 
-.Learn_img {
+.image {
+  border-radius: 10px;
+}
+.image.learn{
   margin-left: 2.5vmax;
   border-radius: 10px;
   box-shadow: 15px 15px 15px black;
 }
+
 
 .KOSR_MD {
   border-radius: 10px;

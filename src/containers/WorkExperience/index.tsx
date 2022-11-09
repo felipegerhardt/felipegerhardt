@@ -40,7 +40,7 @@ const WorkExperience = () => {
         <div data-aos="fade"  className='experience__text__container'>
 
           {experiences.map((experience) => 
-            <ExperienceCard experience={experience}/>
+            <ExperienceCard name={experience.name} role={experience.role} duration={experience.duration} description={experience.description}/>
           )}
 
         </div>

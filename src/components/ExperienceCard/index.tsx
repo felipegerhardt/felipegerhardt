@@ -1,12 +1,18 @@
-import React from 'react'
-import './index.css'
+import React, { ReactElement } from 'react';
+import './index.css';
 
-const ExperienceCard = (props:any) => {
+const ExperienceCard = ({
+  name,
+  role,
+  duration,
+  description
+}:{
+  name: string;
+  role: string;
+  duration: string;
+  description: ReactElement;
 
-  const name = props.experience.name
-  const role = props.experience.role
-  const duration = props.experience.duration
-  const description = props.experience.description
+}) => {
 
   return (
     <div className='experience__textblock__container'> 

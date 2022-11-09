@@ -1,15 +1,25 @@
-import React from 'react'
+import React, { ReactElement } from 'react'
 import './index.css'
 
-const EducationCard = (props:any) => {
+const EducationCard = ({
+  name,
+  course, 
+  location, 
+  GPA,
+  acc,
+  url,
+  duration}:{
+  name:string;
+  course: string;
+  location: string;
+  GPA: string;
+  acc: string | ReactElement;
+  url: string;
+  duration: string;
+}) => {
 
-  const name = props.education.name
-  const course = props.education.course
-  const location = props.education.location
-  const GPA = props.education.GPA
-  const acc = props.education.acc
-  const url = props.education.url
-  const duration = props.education.duration
+  console.log(typeof(acc))
+
 
   return (
     <div className='one__education__card__container'>

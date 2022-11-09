@@ -58,14 +58,24 @@ const Projects = () => {
       <p data-aos="fade" className='section__header' id='Projects'> Projects </p>
     
       <div className="projects__card__container">
-        {projects.map((project:any) => 
-          <div className="one__project__container">
-            <ProjectsCard project={project} />
 
-            {/* Unefficient coding below */}
+        {projects.map((project) => 
+          <div className="one__project__container">
+
+            <ProjectsCard 
+              project={project.name}
+              about={project.about}
+              duration={project.duration}
+              url={project.url}/>
+
+            {project.images.map((image) => 
+
+            <div className='image__container'>
+              <img alt='Project image' data-aos="zoom-in" src={image} width={200} className={`image ${project.duration.slice(0,2)}`} />
+            </div>  )
+            } 
             
-            
-            {project.name === "L-earn" 
+            {/* {project.name === "L-earn" 
             ? 
             <div className='image__container'>
               <img alt='L-earn print screen' data-aos="fade-left" src={project.images[0]} width={200} className='Learn_img' />
@@ -89,7 +99,8 @@ const Projects = () => {
               <img className='Unlock' alt='Unlock' data-aos="fade-left" src={project.images[0]} width={320} height={500} />
                 
             </div>
-          }
+          } */}
+
           </div>
         )}
       </div>
