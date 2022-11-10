@@ -11,67 +11,13 @@
   flex-direction: column;
   justify-self: center;
   margin-left: 5vmax;
+  margin-right: 5vmax;
 }
 
 .one__project__container {
   display: flex;
   flex-direction: row;
   margin-top: 3vmax;
-}
-
-.image__container{
-  display: flex;
-  flex-direction: row;
-  position: relative; 
-  left: 0; top: 0
-}
-
-.image {
-  border-radius: 10px;
-}
-.image.learn{
-  margin-left: 2.5vmax;
-  border-radius: 10px;
-  box-shadow: 15px 15px 15px black;
-}
-
-
-.KOSR_MD {
-  border-radius: 10px;
-  box-shadow: 15px 15px 15px black;
-  image-resolution: 0dppx;
-}
-
-.KOSR_container{
-  margin-left: 2rem;
-  display: flex;
-  flex-direction: column;
-}
-.KOSR_gifs_container {
-  
-  display: flex;
-  flex-direction: row;
-}
-
-.Unlock {
-  margin-left: 50px;
-}
-
-.KOSR_gifs1{
-  border-radius: 10px;
-  box-shadow: 15px 15px 15px black;
-  image-resolution: 0dppx;
-  position: relative;
-  margin-left: 5px;
-}
-
-.KOSR_gifs2{
-  border-radius: 10px;
-  box-shadow: 15px 15px 15px black;
-  image-resolution: 0dppx;
-  margin-top: -10px;
-  margin-left: -10px;
-  z-index: 1;
 }
 
 @media screen and (max-width: 1050px) {
@@ -95,18 +41,6 @@
   .one__project__container{
     flex-direction: column;
   }
-  .image__container{
-    flex-direction: row;
-    align-self: center;
-  }
-  .KOSR_MD {
-    margin-left: 0;
-    width: 380px;
-    height: 380px;
-  }
-  .Learn_img {
-    width: 150px;
-  }
 }
 
 
@@ -114,33 +48,5 @@
   .CardProjects {
     border-radius: 10px;
 
-  }
-  .Learn_img {
-    width: 120px;
-    margin-right: 20px;
-  }
-  .image__container{
-    flex-direction: row;
-    align-self: center;
-    width: 80%;
-    margin-right: 25%;
-  }
-  
-.Unlock {
-  margin-left: 0px;
-}
-
-  
-  .KOSR_MD {
-    margin-left: 0;
-    width: 250px;
-    height: 250px;
-    position: relative;
-    top: 0;
-    left: 0;
-  }
-  
-  .KOSR_gifs2{
-    display: none;
   }
 }

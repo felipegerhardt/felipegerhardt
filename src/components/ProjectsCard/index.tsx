@@ -26,7 +26,7 @@ const ProjectsCard = ({
     <div data-aos="zoom-in" className='CardProjects' onClick={ () => window.open(url) }>
       <p className='header__project_card'> {project} </p>
       <p className='text__project__card'> {about} </p>
-      <p className='text__duration'> Duration: {duration} </p>
+      <p className='text__duration'> Started in: {duration} </p>
     </div>
 
   )

@@ -52,7 +52,7 @@ const AboutMe = () =>  {
             <p>I love</p>
           
           
-            <MovingComponent className='text-aux' type="typewriter"
+            <MovingComponent type="typewriter"
                 dataText={[
                 'programming',
                 'learning',

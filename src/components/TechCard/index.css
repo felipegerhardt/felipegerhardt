@@ -5,20 +5,21 @@
   height: 22rem;
   justify-content: flex-start;
   align-content: center;
-  background-image: linear-gradient(rgb(58, 129, 191, 0.08), rgb(65, 48, 90, 0.08));
+  background-color: rgba(255, 255, 255, 0.05);
   margin-left: 2rem;
   margin-right: 2rem;
   margin-top: 2rem;
   border-radius: 40px;
   border: 0.5px solid;
-  box-shadow: -1px 1px 1px #3A81BF, 1px -1px 1px #41305A, 1px 1px 1px green;
+  box-shadow: 0px 0px 3px rgba(255, 255, 255, 1);
   padding: 20px;
-  transition: all 250ms;
+  transition: ease-in-out 250ms;
   cursor: pointer;
 }
 
 .Card:hover {
-  background-image: linear-gradient(rgb(58, 129, 191, 0.18), rgb(65, 48, 90, 0.18));
+  background-color: rgba(255, 255, 255, 0.1);
+  scale: 1.02;
 }
 
 
