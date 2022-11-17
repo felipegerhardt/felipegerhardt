@@ -6,17 +6,19 @@ import Aos from 'aos'
 import 'aos/dist/aos.css';
 
 const ProjectsCard = ({
+  id,
   project,
   about,
   status,
   url,
-  img,
+  image
 }:{
+  id: string
   project: string | ReactElement;
   about: ReactElement;
   status:string;
   url:string;
-  img:string;
+  image: string;
 }) => {
 
   useEffect (() => {
@@ -29,7 +31,7 @@ const ProjectsCard = ({
     <div className='CardProjects' onClick={ () => window.open(url) }>
       <div className='cardInfo'>
         <div className="iconAndNameContainer">
-          <img src={img} />
+          <img src={image} width={50}/>
           <p className='header__project_card'> {project}</p>
         </div>
         { status==='Concluded' 
@@ -41,7 +43,6 @@ const ProjectsCard = ({
             <AiOutlineLoading3Quarters className='Loading'/>
             <p className='status development'>{status}</p>
           </div>}
-        <p className='header__project_card'> {project} </p> 
       </div>
     </div>
 

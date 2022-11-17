@@ -1,8 +1,7 @@
 import React, {useEffect} from 'react';
 import './index.css';
 import ProjectsCard from '../../components/ProjectsCard';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import image from '../../../public/L-earn_icon.png'
+import { Swiper, SwiperSlide } from 'swiper/react'
 
 import Aos from 'aos'
 import 'aos/dist/aos.css'; // You can also use <link> for styles
@@ -10,7 +9,7 @@ import 'swiper/css';
 
 const projects = [
   {
-    id: 1,
+    id: 'unlock',
     name: 'Unlock',
     about: <>
       <p> Unlock is a NFT Marketplace being developed by me and my partner
@@ -23,11 +22,11 @@ const projects = [
     start: 'Apr/2022',
     url: 'https://www.figma.com/proto/Gi3d8w4V8tCzeSVRIbH52V/MVP?node-id=237%3A1280&scaling=scale-down-width&page-id=0%3A1&starting-point-node-id=237%3A1280&hide-ui=1',
     status: 'Development',
-    img: image
+    image: require('../../assets/unlock.png'),
   },
 
   {
-    id: 2,
+    id: 'learn',
     name: 'L-earn',
     about: <>
       <p> L-earn is a gamified learning platform that connects tutors to students with goals and tutoring subjects well specified in an On Demand platform. The framework is React Native
@@ -39,10 +38,10 @@ const projects = [
     start: 'Aug/2021',
     url: 'https://github.com/felipegerhardt/Learn.public',
     status: 'Development',
-    img: require('../../assets/Learn_Icon.png')
+    image: require('../../assets/learn.png'),
   }, 
   {
-    id: 3,
+    id: 'kosr',
     name: 'Kinematics of a space robot',
     about: <>
     <p> In this repo I analyzed the kinematics of a space robot under different gravity conditions using the Python libraries Sympy, Scipy, Numpy and Pydy.
@@ -54,7 +53,7 @@ const projects = [
     start: 'Jan/2021',
     url: 'https://github.com/felipegerhardt/kinematics-of-a-space-robot',
     status: 'Concluded',
-    img: require('../../assets/K_icon.svg')
+    image: require('../../assets/kosr.png'),
   }
 ]
 
@@ -84,11 +83,12 @@ const Projects = () => {
       {projects.map((project) => 
         <SwiperSlide>
           <ProjectsCard 
+            id={project.id}
             project={project.name}
             about={project.about}
             status={project.status}
-            url={project.url} 
-            img={project.img}/>
+            url={project.url}
+            image={project.image}/>
         </SwiperSlide>
         )
       }
