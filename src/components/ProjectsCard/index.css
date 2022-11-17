@@ -1,26 +1,62 @@
 .CardProjects {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   width: 100%;
+  height: 100%;
   align-self: center;
   align-content: center;
-  margin-left: 2vmax;
-  margin-right: 2vmax;
   border-radius: 40px;
-  padding: 50px 20px 50px 20px;
-  cursor: pointer;
-  max-height: none;
-  background-color: rgba(255, 255, 255, 0.05);
-  box-shadow: 0px 0px 3px rgba(255, 255, 255, 1);
+}
+.cardInfo {
+  display: flex;
+  flex-direction: column;
+  background-color: red;
+  width: 100%;
+  height: 100%;
+}
+.iconAndNameContainer{
+  display: flex;
+  flex-direction: column;
 }
 
+.Loading {
+  color: yellow;
+  animation: spin 1s infinite linear;
+}
+.status {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width:min-content;
+  padding: 10px;
+}
+.status.concluded {
+  color: green;
+}
+.status.development {
+  color: yellow;
+}
+
+
+.Concluded {
+  color: green
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
 
 .header__project_card {
   font-weight: 500;
   font-size: 26px;
   align-self: center;
+  justify-content: center;
   color: white;
   width: 100%;
+  margin-left: 75px;
+  margin-top: 25px;
 }
 
 .text__project__card {
@@ -40,23 +76,9 @@
 }
 
 @media screen and (max-width: 1050px) {
-  .CardProjects {
-    border-radius: 20px;
-    width: 80%;
-    margin-right: 8vmax;
-    margin-top: 4vmax;
-    margin-bottom: 4vmax;
-  }
 }
 
 @media screen and (max-width: 750px) {
-  .CardProjects {
-    border-radius: 20px;
-    width: 80%;
-    margin-right: 8vmax;
-    margin-top: 4vmax;
-    margin-bottom: 4vmax;
-  }
   
   .text__project__card {
     font-size: 14px;
@@ -69,10 +91,6 @@
 
 
 @media screen and (max-width: 490px) {
-  .CardProjects {
-    border-radius: 10px;
-
-  }
 
   
 }

@@ -1,5 +1,6 @@
 import React, {ReactElement, useEffect} from 'react';
 import './index.css'
+import {AiOutlineCheckCircle, AiOutlineLoading3Quarters} from 'react-icons/ai'
 
 import Aos from 'aos'
 import 'aos/dist/aos.css';
@@ -7,13 +8,15 @@ import 'aos/dist/aos.css';
 const ProjectsCard = ({
   project,
   about,
-  duration,
-  url
+  status,
+  url,
+  img,
 }:{
-  project:string;
+  project: string | ReactElement;
   about: ReactElement;
-  duration:string;
+  status:string;
   url:string;
+  img:string;
 }) => {
 
   useEffect (() => {
@@ -23,10 +26,23 @@ const ProjectsCard = ({
   }, [])
   
   return (
-    <div data-aos="zoom-in" className='CardProjects' onClick={ () => window.open(url) }>
-      <p className='header__project_card'> {project} </p>
-      <p className='text__project__card'> {about} </p>
-      <p className='text__duration'> Started in: {duration} </p>
+    <div className='CardProjects' onClick={ () => window.open(url) }>
+      <div className='cardInfo'>
+        <div className="iconAndNameContainer">
+          <img src={img} />
+          <p className='header__project_card'> {project}</p>
+        </div>
+        { status==='Concluded' 
+        ? <div className='status'>
+            <AiOutlineCheckCircle className='Concluded' />
+            <p className='status concluded'>{status}</p>
+          </div> 
+        : <div className='status'>
+            <AiOutlineLoading3Quarters className='Loading'/>
+            <p className='status development'>{status}</p>
+          </div>}
+        <p className='header__project_card'> {project} </p> 
+      </div>
     </div>
 
   )

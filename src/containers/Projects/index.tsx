@@ -1,9 +1,12 @@
 import React, {useEffect} from 'react';
 import './index.css';
-import ProjectsCard from '../../components/ProjectsCard'
+import ProjectsCard from '../../components/ProjectsCard';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import image from '../../../public/L-earn_icon.png'
 
 import Aos from 'aos'
 import 'aos/dist/aos.css'; // You can also use <link> for styles
+import 'swiper/css';
 
 const projects = [
   {
@@ -19,7 +22,8 @@ const projects = [
       <br/> • We are currently looking for angel investors</p></>,
     start: 'Apr/2022',
     url: 'https://www.figma.com/proto/Gi3d8w4V8tCzeSVRIbH52V/MVP?node-id=237%3A1280&scaling=scale-down-width&page-id=0%3A1&starting-point-node-id=237%3A1280&hide-ui=1',
-    status: 'Concluded'
+    status: 'Development',
+    img: image
   },
 
   {
@@ -34,7 +38,8 @@ const projects = [
       <br/> • Basic backend on Google Firebase</p></>,
     start: 'Aug/2021',
     url: 'https://github.com/felipegerhardt/Learn.public',
-    status: 'Concluded'
+    status: 'Development',
+    img: require('../../assets/Learn_Icon.png')
   }, 
   {
     id: 3,
@@ -48,7 +53,8 @@ const projects = [
     <br/> • How to perform 3D dynamic simulations </p></>,
     start: 'Jan/2021',
     url: 'https://github.com/felipegerhardt/kinematics-of-a-space-robot',
-    status: 'Concluded'
+    status: 'Concluded',
+    img: require('../../assets/K_icon.svg')
   }
 ]
 
@@ -65,20 +71,30 @@ const Projects = () => {
     <div className='containerProjects'>
       <p data-aos="fade" className='section__header' id='Projects'> Projects </p>
     
-      <div className="projects__card__container">
 
-        {projects.map((project) => 
-          <div className="one__project__container">
+    <Swiper
+      data-aos="fade"
+      className='swiperContainer'
+      spaceBetween={0}
+      slidesPerView={1}
+      /* onSlideChange={} */
+      onSwiper={(swiper) => console.log(swiper)}
+      >
 
-            <ProjectsCard 
-              project={project.name}
-              about={project.about}
-              duration={project.start}
-              url={project.url}/>
+      {projects.map((project) => 
+        <SwiperSlide>
+          <ProjectsCard 
+            project={project.name}
+            about={project.about}
+            status={project.status}
+            url={project.url} 
+            img={project.img}/>
+        </SwiperSlide>
+        )
+      }
 
-          </div>
-        )}
-      </div>
+
+    </Swiper>
 
     </div>
   )
