@@ -18,8 +18,6 @@ const EducationCard = ({
   duration: string;
 }) => {
 
-  console.log(typeof(acc))
-
 
   return (
     <div className='one__education__card__container'>

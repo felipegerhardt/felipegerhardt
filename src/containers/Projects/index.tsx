@@ -1,14 +1,15 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import './index.css';
 import ProjectsCard from '../../components/ProjectsCard';
-import { Swiper, SwiperSlide } from 'swiper/react'
+import { Swiper, SwiperSlide,} from 'swiper/react'
 
 import Aos from 'aos'
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 import 'swiper/css';
+import SwiperIndicator from '../../components/SwiperIndicator';
 
 const projects = [
-  {
+  { number: 0,
     id: 'unlock',
     name: 'Unlock',
     about: <>
@@ -27,7 +28,7 @@ const projects = [
     technologies: ['Javascript', 'React.js', 'Next.js', 'Tailwind', 'Firebase API'],
   },
 
-  {
+  { number: 1,
     id: 'learn',
     name: 'L-earn',
     about: <>
@@ -44,7 +45,7 @@ const projects = [
     tags: ['EdTech', 'social network', 'online tutoring'],
     technologies: ['Javascript', 'React Native', 'React.js', 'Firebase API']
   }, 
-  {
+  { number: 2,
     id: 'kosr',
     name: 'Kinematics of a space robot',
     about: <>
@@ -65,44 +66,47 @@ const projects = [
 
 const Projects = () => {
 
+  const [choice, setChoice] = useState(0);
   
+
   useEffect (() => {
 
     Aos.init({duration: 2000})
-    
-  }, [])
+  }, [choice])
+
 
   return (
     <div className='containerProjects'>
       <p data-aos="fade" className='section__header' id='Projects'> Projects </p>
     
+      <SwiperIndicator projects={projects} choice={choice} setChoice={setChoice} />
 
-    <Swiper
-      data-aos="fade"
-      className='swiperContainer'
-      spaceBetween={0}
-      slidesPerView={1}
-      /* onSlideChange={} */
-      onSwiper={(swiper) => console.log(swiper)}
-      >
+      <Swiper
+        data-aos="fade"
+        className='swiperContainer'
+        spaceBetween={0}
+        slidesPerView={1}
+        onSlideChange={(a) => setChoice(a.activeIndex) }
+        onSwiper={(swiper) => console.log(swiper)}
+        >
 
-      {projects.map((project) => 
-        <SwiperSlide>
-          <ProjectsCard 
-            id={project.id}
-            project={project.name}
-            about={project.about}
-            status={project.status}
-            url={project.url}
-            image={project.image}
-            tags={project.tags}
-            technologies={project.technologies}/>
-        </SwiperSlide>
-        )
-      }
+        {projects.map((project) => 
+          <SwiperSlide id={project.id}>
+            <ProjectsCard 
+              id={project.id}
+              project={project.name}
+              about={project.about}
+              status={project.status}
+              url={project.url}
+              image={project.image}
+              tags={project.tags}
+              technologies={project.technologies}/>
+          </SwiperSlide>
+          )
+        }
 
 
-    </Swiper>
+      </Swiper>
 
     </div>
   )
