@@ -23,7 +23,7 @@
 .swiperContainer {
   display: flex;
   width: 85%;
-  height: 300px;
+  height: auto;
   margin-top: 50px;
   margin-bottom: 5px;
   background-color: rgba(255,255,255,0.05);
@@ -33,6 +33,14 @@
   align-items: center;
   justify-content: center;
 
+}
+.projectTitle {
+  font-size: x-large;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
 }
 
 @media screen and (max-width: 1050px) {
@@ -55,6 +63,9 @@
   }
   .one__project__container{
     flex-direction: column;
+  }
+  .projectTitle {
+    font-size: large;
   }
 }
 

@@ -23,6 +23,8 @@ const projects = [
     url: 'https://www.figma.com/proto/Gi3d8w4V8tCzeSVRIbH52V/MVP?node-id=237%3A1280&scaling=scale-down-width&page-id=0%3A1&starting-point-node-id=237%3A1280&hide-ui=1',
     status: 'Development',
     image: require('../../assets/unlock.png'),
+    tags: ['blockchain', 'NFT', 'marketplace', 'Web3', 'Solidity'],
+    technologies: ['Javascript', 'React.js', 'Next.js', 'Tailwind', 'Firebase API'],
   },
 
   {
@@ -39,6 +41,8 @@ const projects = [
     url: 'https://github.com/felipegerhardt/Learn.public',
     status: 'Development',
     image: require('../../assets/learn.png'),
+    tags: ['EdTech', 'social network', 'online tutoring'],
+    technologies: ['Javascript', 'React Native', 'React.js', 'Firebase API']
   }, 
   {
     id: 'kosr',
@@ -54,6 +58,8 @@ const projects = [
     url: 'https://github.com/felipegerhardt/kinematics-of-a-space-robot',
     status: 'Concluded',
     image: require('../../assets/kosr.png'),
+    tags: ['simulation', 'Sympy', 'PyDy', 'Scipy'],
+    technologies: ['Python']
   }
 ]
 
@@ -88,7 +94,9 @@ const Projects = () => {
             about={project.about}
             status={project.status}
             url={project.url}
-            image={project.image}/>
+            image={project.image}
+            tags={project.tags}
+            technologies={project.technologies}/>
         </SwiperSlide>
         )
       }
