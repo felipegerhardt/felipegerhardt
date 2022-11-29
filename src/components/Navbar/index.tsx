@@ -58,25 +58,25 @@ const Navbar = () => {
     return () => {
       window.removeEventListener('scroll', changeBackground);
     };
-  }, [window.scrollY])
+  }, [])
   
   return (
 
     <>
     
-    <div className={ navbar ? "navbarcontainer active" : "navbarcontainer" }>
+    <div className={ navbar ? "navbar-container active" : "navbar-container" }>
       <p className='FG'>FG</p>
-      <div className="rightSideButtons">
+      <div className="links">
         {links.map((myList, index) => <a href={`#${myList}`} className='ListButtons' key={index}>{myList}</a>)}
       </div>
 
-      <div className='menu__container'>
+      <div className='menu-container'>
         
         
         {toggleMenu  ?
-          <RiCloseLine className='menu__icon' color='#fff' size={27} onClick={() => setToggleMenu(false)}/>
+          <RiCloseLine className='menu-icon' color='#fff' size={27} onClick={() => setToggleMenu(false)}/>
           : 
-          <RiMenu3Line className='menu__icon' color='#fff' size={27} onClick={() => setToggleMenu(true)}
+          <RiMenu3Line className='menu-icon' color='#fff' size={27} onClick={() => setToggleMenu(true)}
           />
           }
         
@@ -91,10 +91,6 @@ const Navbar = () => {
             </animated.div> : null
             )}
       </div>
-
-      <button className='ContactMeButton'>
-        <a className='ContentButton' href='#ContactMe'>Contact me</a>
-      </button>
       <ToastContainer />
     </div>
 

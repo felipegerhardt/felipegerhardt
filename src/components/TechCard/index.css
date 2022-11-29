@@ -1,4 +1,4 @@
-.Card {
+.card-container {
   display: flex;
   flex-direction: column;
   width: 15rem;
@@ -17,26 +17,10 @@
   cursor: pointer;
 }
 
-.Card:hover {
+.card-container:hover {
   background-color: rgba(255, 255, 255, 0.1);
   box-shadow: 0px 0px 10px rgba(255, 255, 255, 1);
   scale: 1.02;
-}
-
-
-.header__card {
-  color: white;
-  font-weight: 400;
-  font-size: 15px;
-  text-align: center;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
-.text__card {
-  color: white;
-  font-weight: 200;
-  font-size: 14px;
 }
 
 
@@ -84,23 +68,25 @@
   justify-self: center;
 }
 
+.card-header {
+  color: white;
+  font-weight: 400;
+  font-size: 15px;
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 
 @media screen and (max-width: 750px) {
   
-.text__card {
-  font-size: 14px;
-}
 }
 
 
 @media screen and (max-width: 490px) {
-  .CardProjects {
+  .card-container {
     border-radius: 10px;
 
-  }
-
-  .text__card {
-    font-size: 14px;
   }
   
 }

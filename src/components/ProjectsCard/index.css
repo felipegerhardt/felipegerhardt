@@ -1,47 +1,22 @@
-.CardProjects {
+.projects-card-container {
   display: flex;
   flex-direction: row;
   width: 100%;
   height: 100%;
   align-self: center;
   align-content: center;
+  border-radius: 20px;
 }
-.cardInfo {
+
+.card-info {
   display: flex;
   flex-direction: column;
   width: 100%;
   height: 100%;
+  justify-content: center;
+  align-items: center;
 }
-.iconAndNameContainer{
-  display: flex;
-  flex-direction: row;
-  margin-top: 10px;
-  margin-left: 10px;
-}
-.tag {
-  display: flex;
-  width: max-content;
-  font-size: 10px;
-  margin-bottom: 7px;
-  text-align: center;
-  margin-right: 15px;
-  border-width: 1px;
-  border-color: black;
-  border-radius: 7px;
-  padding: 4px;
-  background-color: rgba(255,255,255, 0.1);
 
-}
-.tagsContainer {
-  display: grid;
-  margin-top: 10px;
-  padding: 3px;
-  width: fit-content;
-  grid-template: 
-  "a a"
-  "b b"
-  "c c";
-}
 .image {
   display: flex;
   width: 150px;
@@ -61,9 +36,8 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  width:min-content;
-  padding: 10px;
-  margin-left: 20px;
+  margin-left: 10px;
+  margin-top: 10px;
   font-size: 14px;
 }
 .status.concluded {
@@ -73,6 +47,14 @@
   color: yellow;
 }
 
+.project-title {
+  font-size: x-large;
+  text-align: center;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
 
 .Concluded {
   color: green
@@ -83,23 +65,52 @@
   flex-direction: row;
   width: 100%;
   height: 100%;
+  align-items: flex-start;
+  justify-content: flex-start;
   
 }
 
 .description {
   display: flex;
   flex-direction: column;
-  width: 20%;
+  width: 15%;
   padding: 20px;
-
 }
+
+
+.technologies {
+  width: min-content;
+  white-space:nowrap ;
+  font-size: small;
+  padding: 2px;
+  margin-top: 5px; 
+  border-style: solid;
+  border-color: white;
+  border-radius: 5px;
+  border-width: 1px;
+  background-color: grey;
+  
+}
+
+.technologies-title {
+  margin-bottom: 5px;
+  font-size: medium;
+}
+
 .illustration {
-  width: 80%;
+  display: flex;
+  flex-direction: column;
+  width: 75%;
   height: 100%;
+  padding-bottom: 50px;
+  justify-content: flex-end;
+  align-items: flex-end;
 
 }
 
-
+.image-illustration {
+  padding-top: 10px;
+}
 
 
 @keyframes spin {
@@ -156,8 +167,16 @@
   .illustration {
     width: 70%;
   }
+
   .description {
+    display: flex;
+    flex-direction: row;
     width: 30%;
+  }
+
+
+  .project-title {
+    font-size: large;
   }
 }
 

@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react';
+import React from 'react';
 import './index.css';
 
 const ExperienceCard = ({
@@ -10,7 +10,7 @@ const ExperienceCard = ({
   name: string;
   role: string;
   duration: string;
-  description: ReactElement;
+  description: string;
 
 }) => {
 

@@ -11,9 +11,9 @@ const TechCard = ({
   url: string;
 }) => {
   return(
-    <div className="Card" onClick={() => window.open(url)}>
+    <div className="card-container" onClick={() => window.open(url)}>
       <div className={`${id}`}> </div>
-      <h1 className='header__card'>{technology}</h1>
+      <h1 className='card-header'>{technology}</h1>
     </div>
   )
 }

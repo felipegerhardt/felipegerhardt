@@ -5,17 +5,21 @@
   padding: 2rem 6rem;
 }
 
-.navbarcontainer {
+.navbar-container {
   display: flex;
   flex-direction: row;
-  width: 100%;
+  width: 60%;
   height: 60px;
   position: fixed;
   z-index: 12;
-  transition: all 80ms ease-in;
+  align-self: center;
+  transition: ease all 150ms;
+  box-shadow: 0px 0px 10px white;
+  border-radius: 10px;
+  margin-top: 10px;
 }
 
-.navbarcontainer.active {
+.navbar-container.active {
   background-color: black;
 }
 
@@ -24,10 +28,10 @@
   background-image: linear-gradient(80deg, #CDCDCD, #585858);
   background-size: 100%;
   background-repeat: repeat;
-  font-size: 4vmax;
+  font-size: 3vmax;
   font-weight: 700;
   font-family: 'Poppins', sans-serif;
-  margin-left: 8vmax;
+  margin-left: 10%;
   align-self: center;
   text-align: center;
   animation: scale-up-center 1s;
@@ -44,42 +48,22 @@
 }
 
 
-.ContactMeButton{
-  cursor: pointer;
-  border: none;
-  outline: none;
-  margin-left: 2rem;
-  margin-right: 8vmax;
-  align-self: center;
-  white-space: nowrap;
-  padding: 0.5rem 1rem;
-  border-radius: 10px;
-  box-shadow: inset 0 0 1px rgba(8, 173, 2, 0.3);
-  transition: color .5s ease-in-out, box-shadow .5s ease-in-out;
-}
-.ContactMeButton:hover {
-  box-shadow: inset 200px 0 1px rgb(6, 141, 2);
-  color: white;
-  text-shadow: 0 0 3px white;
-  
-}
 
-
-.ContentButton{
+.ContentButton {
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
   font-size: 1.1vmax;
 }
 
 
-.rightSideButtons{
+.links {
   display: flex;
   flex-direction: row;
   width: 100%;
   height: 100%;
   color: white;
   font-size: 1.15vmax;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   font-family: 'Poppins', sans-serif;
   font-weight: 300;
@@ -90,14 +74,13 @@
   margin-left: 5px;
   margin-right: 5px;
   white-space: nowrap;
-  box-shadow: inset 0 0 0 0 rgba(9, 255, 0, 0.842);
   color: white;
-  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+  transition: color 200ms ease-in-out, box-shadow 200ms ease-in-out;
   border-radius: 2px;
 
 }
 .ListButtons:hover {
-  box-shadow: inset 200px 0 0 2px rgba(9, 255, 0, 0.3);
+  box-shadow: inset 200px 0 0 2px rgba(255, 255, 255, 0.15);
   color: white;
   text-shadow: 0 0 3px white;
   
@@ -107,7 +90,7 @@
   box-shadow: none;
 }
 
-.menu__icon {
+.menu-icon {
   display: none;
 }
 
@@ -118,7 +101,7 @@
   margin-bottom: 10px;
 }
 
-.menu__container{
+.menu-container{
   display: flex;
   flex: 1;
   justify-content: flex-end;
@@ -155,20 +138,21 @@
 }
 
 @media screen and (max-width: 750px) {
-  .rightSideButtons{
+  .navbar-container {
+    width: 100%;
+    box-shadow: none;
+  }
+
+  .links {
     display: none
   }
-  .menu__icon {
+  .menu-icon {
     display: flex;
     align-self: center;
-    margin-right: 8vmax;
+    margin-right: 10%;
     cursor: pointer;
   }
   
-  .ContactMeButton {
-    display: none;
-
-  }
   .gpt3__navbar-menu_container-links-sign {
     display: block
   }
@@ -181,20 +165,13 @@
 
 
 @media screen and (max-width: 490px) {
-  .FG {
-    margin-left: 5vmax;
-  }
-  .ContactMeButton {
-    display: none;
-
-  }
-  .menu__icon {
+  .menu-icon {
     display: flex;
     align-self: center;
-    margin-right: 5vmax;
+    margin-right: 10%;
     cursor: pointer;
   }
-  .rightSideButtons{
+  .links {
     display: none
   }
   .gpt3__navbar-menu_container-links-sign {

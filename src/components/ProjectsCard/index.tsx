@@ -6,23 +6,19 @@ import Aos from 'aos'
 import 'aos/dist/aos.css';
 
 const ProjectsCard = ({
-  id,
   project,
-  about,
   status,
   url,
   image,
-  tags,
-  technologies
+  technologies,
+  width
 }:{
-  id: string
   project: string | ReactElement;
-  about: ReactElement;
   status:string;
   url:string;
   image: string;
-  tags: Array<string>;
   technologies: Array<string>;
+  width: number;
 }) => {
 
   useEffect (() => {
@@ -32,49 +28,43 @@ const ProjectsCard = ({
   }, [])
   
   return (
-    <div className='CardProjects' onClick={ () => window.open(url) }>
-      <div className='cardInfo'>
+    <div className='projects-card-container' onClick={ () => window.open(url) }>
+      <div className='card-info'>
         
-        <div className="iconAndNameContainer">
-          <img src={image} width={50} height={50}/>
-          <p className='projectTitle'> {project}</p>
-        </div>
+        <p className='project-title'> {project}</p>
 
         <div className="contentContainer">
 
           <div className="description">
-            <p style={{fontSize: 12}}>Tags</p>
-            <div className='tagsContainer'>
-              
-              {tags.map((tag) => 
-                <div key={tag} className='tag'>
-                  <p>{tag}</p>
-                </div>
-                )
-              }
-            </div>
+            <p className='technologies-title'>Technologies:</p>
+
+            {technologies.map((tech) => <p className='technologies'>{tech}</p>)}
              
           </div>
+
+
           <div className="illustration">
-            Illustration
+
+            <img alt={`${project}`} style={{alignSelf: 'center', justifySelf: 'center', borderRadius: 20}} className='image-illustration' src={image} width={width}/>
+
+
+            { status==='Concluded' 
+            ? <div className='status'>
+                <AiOutlineCheckCircle className='Concluded' />
+                <p className='status concluded'>{status}</p>
+              </div> 
+            : <div className='status'>
+                <AiOutlineLoading3Quarters className='Loading'/>
+                <p className='status development'>{status}</p>
+              </div>
+            }
+
           </div>
 
         </div>
 
 
 
-
-
-        { status==='Concluded' 
-        ? <div className='status'>
-            <AiOutlineCheckCircle className='Concluded' />
-            <p className='status concluded'>{status}</p>
-          </div> 
-        : <div className='status'>
-            <AiOutlineLoading3Quarters className='Loading'/>
-            <p className='status development'>{status}</p>
-          </div>
-        }
 
       </div>
     </div>
