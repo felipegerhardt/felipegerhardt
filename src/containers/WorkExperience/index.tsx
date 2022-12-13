@@ -37,7 +37,7 @@ const WorkExperience = () => {
   
   return (
     <div className="experience-container">
-      <p data-aos="fade"  className='section__header' id="Experiences">Experience</p>
+      <p data-aos="fade"  className='section-header' id="Experiences">Experience</p>
         <div data-aos="fade"  className='experience-text-container'>
 
           {experiences.map((experience) => 

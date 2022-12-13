@@ -34,10 +34,10 @@ const Techonologies = () => {
   }, [])
 
   return (
-    <div className="tech__container">
-      <p data-aos="fade" className='section__header' id='Technologies'>Technologies</p>
+    <div className="tech-container">
+      <p data-aos="fade" className='section-header' id='Technologies'>Technologies</p>
 
-      <div data-aos="fade" className="cardContainer">
+      <div data-aos="fade" className="tech-card-group-container">
 
         {technologies.map((tech:any) => 
           <TechCard technology={tech.name} id={tech.id} url={tech.url}/>

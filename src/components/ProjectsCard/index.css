@@ -1,54 +1,37 @@
-.projects-card-container {
+.single-project-card-container {
   display: flex;
-  flex-direction: row;
-  width: 100%;
-  height: 100%;
-  align-self: center;
+  flex-direction: column;
+  justify-content: center;
   align-content: center;
-  border-radius: 20px;
+
 }
 
 .card-info {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
+  width: 350px; 
+  justify-content: flex-start;
+  align-content: center;
+  background-color: rgba(255, 255, 255, 0.05);
+  margin: 2rem;
+  border-radius: 10px;
+  box-shadow: 0px 0px 3px rgba(255, 255, 255, 1);
+  padding: 20px;
+  transition: ease-in-out 50ms;
+  cursor: pointer;
+  color: white
+
 }
 
-.image {
-  display: flex;
-  width: 150px;
-  height: 100px;
-  align-self: center;
-  justify-self: center;
-  rotate: 180deg;
-  background-color: black;
+.card-info:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 1);
+  scale: 1.02;
 }
 
-.Loading {
-  color: yellow;
-  animation: spin 1s infinite linear;
-}
-.status {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  margin-left: 10px;
-  margin-top: 10px;
-  font-size: 14px;
-}
-.status.concluded {
-  color: green;
-}
-.status.development {
-  color: yellow;
-}
 
 .project-title {
-  font-size: x-large;
+  font-size:large;
   text-align: center;
   width: 100%;
   align-items: center;
@@ -56,13 +39,10 @@
   margin-top: 15px;
 }
 
-.Concluded {
-  color: green
-}
 
 .contentContainer {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 100%;
   height: 100%;
   align-items: flex-start;
@@ -71,10 +51,12 @@
 }
 
 .description {
-  display: flex;
-  flex-direction: column;
-  width: 15%;
-  padding: 20px;
+  display: grid;
+  width: 100%;
+  grid-template-columns: 90px 90px 90px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -82,34 +64,22 @@
   width: min-content;
   white-space:nowrap ;
   font-size: small;
-  padding: 2px;
+  padding: 5px;
   margin-top: 5px; 
   border-style: solid;
   border-color: white;
   border-radius: 5px;
-  border-width: 1px;
+  border-width: 0.5px;
   background-color: grey;
+  justify-content: center;
+  align-items: center;
   
 }
 
 .technologies-title {
+  margin-top: 20px;
   margin-bottom: 5px;
   font-size: medium;
-}
-
-.illustration {
-  display: flex;
-  flex-direction: column;
-  width: 75%;
-  height: 100%;
-  padding-bottom: 50px;
-  justify-content: flex-end;
-  align-items: flex-end;
-
-}
-
-.image-illustration {
-  padding-top: 10px;
 }
 
 
@@ -145,6 +115,10 @@
 }
 
 @media screen and (max-width: 1050px) {
+
+  .card-info {
+    width: 250px;
+  }
 }
 
 @media screen and (max-width: 750px) {
@@ -164,9 +138,6 @@
     "c";
   }
   
-  .illustration {
-    width: 70%;
-  }
 
   .description {
     display: flex;

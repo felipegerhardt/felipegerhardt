@@ -9,16 +9,12 @@ const ProjectsCard = ({
   project,
   status,
   url,
-  image,
   technologies,
-  width
 }:{
-  project: string | ReactElement;
+  project:string | ReactElement;
   status:string;
   url:string;
-  image: string;
   technologies: Array<string>;
-  width: number;
 }) => {
 
   useEffect (() => {
@@ -28,44 +24,21 @@ const ProjectsCard = ({
   }, [])
   
   return (
-    <div className='projects-card-container' onClick={ () => window.open(url) }>
+    <div className='single-project-card-container' onClick={ () => window.open(url) }>
       <div className='card-info'>
         
         <p className='project-title'> {project}</p>
 
         <div className="contentContainer">
-
-          <div className="description">
             <p className='technologies-title'>Technologies:</p>
 
+          <div className="description">
+
             {technologies.map((tech) => <p className='technologies'>{tech}</p>)}
-             
-          </div>
-
-
-          <div className="illustration">
-
-            <img alt={`${project}`} style={{alignSelf: 'center', justifySelf: 'center', borderRadius: 20}} className='image-illustration' src={image} width={width}/>
-
-
-            { status==='Concluded' 
-            ? <div className='status'>
-                <AiOutlineCheckCircle className='Concluded' />
-                <p className='status concluded'>{status}</p>
-              </div> 
-            : <div className='status'>
-                <AiOutlineLoading3Quarters className='Loading'/>
-                <p className='status development'>{status}</p>
-              </div>
-            }
 
           </div>
 
         </div>
-
-
-
-
       </div>
     </div>
 

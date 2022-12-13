@@ -39,7 +39,7 @@ const Education = () => {
   return (
     <div className="education-container">
       
-      <p data-aos="fade" className='section__header' id='Education'>Education</p>
+      <p data-aos="fade" className='section-header' id='Education'>Education</p>
       <div data-aos="fade" className='education-card-container'>
         {education.map((education) => 
         <EducationCard name={education.name} course={education.course} location={education.location}
