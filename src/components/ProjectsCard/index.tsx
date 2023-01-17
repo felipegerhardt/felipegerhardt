@@ -1,7 +1,7 @@
 import React, { useState, ReactElement, useEffect } from 'react';
 import './index.css'
 import { AiOutlineCheckCircle, AiOutlineLoading3Quarters } from 'react-icons/ai'
-import { IoIosArrowDown } from "react-icons/io";
+import { IoIosArrowUp } from "react-icons/io";
 
 import Aos from 'aos'
 import 'aos/dist/aos.css';
@@ -10,23 +10,17 @@ const ProjectsCard = ({
   project,
   status,
   url,
-  technologies,
+  description,
 }: {
   project: string | ReactElement;
   status: string;
   url: string;
-  technologies: Array<string>;
+  description: string;
 }) => {
 
   const [toggle, setToggle] = useState(true);
-  const [toggleDiv, setToggleDiv] = useState(true);
-  const [toggleContainer, setToggleContainer] = useState(true)
-  const [arrow, setArrow] = useState(false);
   function handleClick() {
     setToggle(!toggle)
-    setToggleDiv(!toggleDiv)
-    setToggleContainer(!toggleContainer)
-    setArrow(!arrow)
   }
 
 
@@ -37,13 +31,19 @@ const ProjectsCard = ({
   }, [])
 
   return (
-    <div onClick={handleClick} className={toggleDiv ? 'single-project-card-container' : 'single-project-card-container activated'} /* onClick={ () => window.open(url) } */>
+    <div onClick={handleClick} className={toggle ? 'single-project-card-container' : 'single-project-card-container activated'} /* onClick={ () => window.open(url) } */>
       <div className={toggle ? 'card-info' : 'card-info activated'}>
 
         <div className='title-arrow-div'>
-          <p className={toggleContainer ? 'project-title' : 'project-title activated'}> {project}</p>
+          <p className={toggle ? 'project-title' : 'project-title activated'}> {project}</p>
 
-          <IoIosArrowDown className={arrow ? 'arrow activated' : 'arrow'} size={15}/>
+          <IoIosArrowUp className={toggle ? 'arrow' : 'arrow activated'} size={15}/>
+        </div>
+
+        <div className={toggle ? 'project-description-container' :'project-description-container activated'}>
+          <p className={toggle ? 'project-description' : 'project-description activated'}> {description}</p>  
+          
+
         </div>
 
       </div>
