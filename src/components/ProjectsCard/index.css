@@ -45,12 +45,14 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 10px;
+  padding-right: 10px;
+
 }
 
 .project-title {
   width: fit-content;
   font-size: medium;
-  text-align: left;
+  text-align: center;
   margin-left: 10%;
   margin-right: 0.5rem;
   align-items: center;
@@ -151,6 +153,7 @@
   }
 
   .card-info.activated {
+    height: 180px;
     scale: 1.5;
   }
 
@@ -179,13 +182,28 @@
 
   .single-project-card-container {
     width: 80%;
-    height: 500px;
+    height: 300px;
+  }
+
+  .card-info {
+    scale: 1;
+    height: 280px;
+
   }
 
   .card-info.activated {
     scale: 1;
     height: 380px;
 
+  }
+
+  .project-title {
+    font-size: large;
+  }
+
+
+  .project-description {
+    font-size: small;
   }
 
 
@@ -210,10 +228,6 @@
   }
 
 
-
-  .project-title {
-    font-size: large;
-  }
 }
 
 
