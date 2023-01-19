@@ -2,6 +2,8 @@ import React, { useState, ReactElement, useEffect } from 'react';
 import './index.css'
 import { AiOutlineLoading3Quarters } from 'react-icons/ai'
 import { IoIosArrowDown } from "react-icons/io";
+import { IoCheckmarkCircleOutline } from "react-icons/io5";
+
 
 import Aos from 'aos'
 import 'aos/dist/aos.css';
@@ -42,8 +44,14 @@ const ProjectsCard = ({
         <div className={toggle ? 'project-description-container' :'project-description-container activated'}>
           <p className={toggle ? 'project-description' : 'project-description activated'}> {description}</p>  
           <div className={toggle ? 'project-status-container' : 'project-status-container activated'}> 
-            <AiOutlineLoading3Quarters className={toggle ? 'progress-icon' : 'progress-icon activated'}/>
-            <p className={toggle ? 'project-status' : 'project-status activated'}>{status}</p>
+            {status == 'Development' 
+            ? <AiOutlineLoading3Quarters className={toggle ? 'progress-icon' : 'progress-icon activated'}/> 
+            : <IoCheckmarkCircleOutline className={toggle ? 'concluded-icon' : 'concluded-icon activated'}/>}
+            
+            <p className={
+              toggle ? 'project-status' : 
+              status==='Concluded' ? 'project-status activated concluded' : 'project-status activated inprogress'
+              }>{status}</p>
           </div>
         </div>
 

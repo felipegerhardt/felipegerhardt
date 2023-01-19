@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './index.css'
 
 const TechCard = ({
@@ -10,8 +10,14 @@ const TechCard = ({
   id: string;
   url: string;
 }) => {
+  const [toggle, setToggle] = useState(true);
+
+  function handleClick () {
+    setToggle(!toggle)
+  }
+
   return(
-    <div className="tech-card-container" onClick={() => window.open(url)}>
+    <div className={toggle ? "tech-card-container": 'tech-card-container activated'} onClick={handleClick}>
       <div className={`${id}`}> </div>
       <h1 className='card-header'>{technology}</h1>
     </div>
