@@ -44,13 +44,13 @@ const ProjectsCard = ({
         <div className={toggle ? 'project-description-container' :'project-description-container activated'}>
           <p className={toggle ? 'project-description' : 'project-description activated'}> {description}</p>  
           <div className={toggle ? 'project-status-container' : 'project-status-container activated'}> 
-            {status == 'Development' 
+            {status === 'Development' 
             ? <AiOutlineLoading3Quarters className={toggle ? 'progress-icon' : 'progress-icon activated'}/> 
             : <IoCheckmarkCircleOutline className={toggle ? 'concluded-icon' : 'concluded-icon activated'}/>}
             
             <p className={
               toggle ? 'project-status' : 
-              status==='Concluded' ? 'project-status activated concluded' : 'project-status activated inprogress'
+              status ==='Concluded' ? 'project-status activated concluded' : 'project-status activated inprogress'
               }>{status}</p>
           </div>
         </div>

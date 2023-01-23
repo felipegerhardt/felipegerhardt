@@ -23,6 +23,10 @@
 
 }
 
+.frameworks {
+  color: white
+}
+
 
 @media screen and (max-width: 490px) {
   .section-header {

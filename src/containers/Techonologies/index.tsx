@@ -1,29 +1,35 @@
 import React, {useEffect} from 'react';
 import './index.css';
 import TechCard from '../../components/TechCard'
+import PB from './../../assets/PB.svg'
+import RN from './../../assets/RN.svg'
+import RJ from './../../assets/RJ.svg'
+import PY from './../../assets/PY.svg'
 import Aos from 'aos'
 import 'aos/dist/aos.css'; // You can also use <link> for styles
+import { title } from 'process';
 
 
 const technologies = [
   {name:'React.js',
-  id:'RJ',
-  icon: '',
-  url: 'https://github.com/felipegerhardt/felipegerhardt'},
+  url: 'https://github.com/felipegerhardt/felipegerhardt',
+  source: RJ,
+  frameworks: ['','','','']},
 
   {name:'React Native',
-  id:'RN',
-  icon: '', 
-  url: 'https://github.com/felipegerhardt/Learn.public'},
+  url: 'https://github.com/felipegerhardt/Learn.public',
+  source: RN,
+  frameworks:  ['','','','']},
  
   {name:'Python',
-  id: 'PY',
-  icon: '',
-  url: 'https://github.com/felipegerhardt/kinematics-of-a-space-robot'},
+  url: 'https://github.com/felipegerhardt/kinematics-of-a-space-robot',
+  source: PY,
+  frameworks:  ['','','',''],},
+
   {name:'Power BI',
-  id: 'PB',
-  icon: '',
-  url: 'https://github.com/felipegerhardt'}]
+  url: 'https://github.com/felipegerhardt',
+  source: PB,
+  frameworks: ['','','',''] }]
 
 const Techonologies = () => {
   
@@ -40,7 +46,7 @@ const Techonologies = () => {
       <div data-aos="fade" className="tech-card-group-container">
 
         {technologies.map((tech:any) => 
-          <TechCard technology={tech.name} id={tech.id} url={tech.url}/>
+          <TechCard technology={tech.name} url={tech.url} source={tech.source} frameworks={tech.frameworks} />
         )}
 
       </div>

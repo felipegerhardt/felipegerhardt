@@ -3,12 +3,14 @@ import './index.css'
 
 const TechCard = ({
   technology,
-  id,
   url,
+  source,
+  frameworks,
 }:{
   technology: string;
-  id: string;
   url: string;
+  source: string;
+  frameworks:Array<object>;
 }) => {
   const [toggle, setToggle] = useState(true);
 
@@ -18,8 +20,16 @@ const TechCard = ({
 
   return(
     <div className={toggle ? "tech-card-container": 'tech-card-container activated'} onClick={handleClick}>
-      <div className={`${id}`}> </div>
+      <img className={toggle ? 'tech-vector-image' : 'tech-vector-image activated'} alt='Tech card' src={source}/>
       <h1 className='card-header'>{technology}</h1>
+      <div className={toggle ? 'frameworks-container': 'frameworks-container activated'}>
+        <div className={toggle ? 'frameworks-content' : 'frameworks-content activated'}>
+          {frameworks.map((framework) => 
+          
+          <p>• a</p>
+          )}
+        </div>
+      </div>
     </div>
   )
 }
