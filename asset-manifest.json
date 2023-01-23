@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/felipegerhardt/static/css/main.8f857772.css",
-    "main.js": "/felipegerhardt/static/js/main.2be6f5c9.js",
+    "main.css": "/felipegerhardt/static/css/main.56d2c2e3.css",
+    "main.js": "/felipegerhardt/static/js/main.c56bfc8c.js",
     "static/media/GC.png": "/felipegerhardt/static/media/GC.c8c776c1bb32c5fd810d.png",
     "static/media/UTFPR2.jpg": "/felipegerhardt/static/media/UTFPR2.7f6723e3e1cd6c438e74.jpg",
-    "static/media/PB.svg": "/felipegerhardt/static/media/PB.62bc2ba5fbce754daa80.svg",
-    "static/media/RJ.svg": "/felipegerhardt/static/media/RJ.d122146e3fa08362f705.svg",
-    "static/media/PY.svg": "/felipegerhardt/static/media/PY.fa32a0b021250dffbf55.svg",
-    "static/media/RN.svg": "/felipegerhardt/static/media/RN.4cbb08531243dec17bb7.svg",
+    "static/media/PB.svg": "/felipegerhardt/static/media/PB.1cc8633a8757c7af7f517bc9c7a8a5b9.svg",
+    "static/media/RJ.svg": "/felipegerhardt/static/media/RJ.5ab5f11888fe2e6ee7156ae4512fc52e.svg",
+    "static/media/PY.svg": "/felipegerhardt/static/media/PY.fa32a0b021250dffbf5500ec85eacbd9.svg",
+    "static/media/RN.svg": "/felipegerhardt/static/media/RN.8618f777152c84d97b94b954d8ae77fe.svg",
     "index.html": "/felipegerhardt/index.html",
-    "main.8f857772.css.map": "/felipegerhardt/static/css/main.8f857772.css.map",
-    "main.2be6f5c9.js.map": "/felipegerhardt/static/js/main.2be6f5c9.js.map"
+    "main.56d2c2e3.css.map": "/felipegerhardt/static/css/main.56d2c2e3.css.map",
+    "main.c56bfc8c.js.map": "/felipegerhardt/static/js/main.c56bfc8c.js.map"
   },
   "entrypoints": [
-    "static/css/main.8f857772.css",
-    "static/js/main.2be6f5c9.js"
+    "static/css/main.56d2c2e3.css",
+    "static/js/main.c56bfc8c.js"
   ]
 }
