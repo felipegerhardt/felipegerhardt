@@ -19,7 +19,7 @@ const technologies = [
   {name:'React Native',
   url: 'https://github.com/felipegerhardt/Learn.public',
   source: RN,
-  frameworks:  ['Layout, navigation and user interactions','Expo','Component-based architecture', 'Version control (Git)']},
+  frameworks:  ['Layout, navigation and user interactions','Component-based architecture', 'Expo', 'Version control (Git)']},
  
   {name:'Python',
   url: 'https://github.com/felipegerhardt/kinematics-of-a-space-robot',

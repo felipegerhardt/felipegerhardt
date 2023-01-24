@@ -8,13 +8,10 @@ import EducationCard from '../../components/EducationCard'
 
 const education = [
   {
-    name: 'Universidade Tecnológica Federal do Paraná',
-    course: 'Mechanical Engineering',
-    location: 'Londrina, Paraná - Brazil',
-    acc: <><p> • A1 International Journal Scientific <a style={{color: 'blue'}} onClick={() => window.open('https://www.sciencedirect.com/science/article/abs/pii/S2352152X21006769')}>publication</a>;
-    <br/> • National Congress <a style={{color: 'blue'}} onClick={() => window.open('https://abcm.org.br/uploads/Anais%20do%20XXV%20CREEM%20vol.1.pdf#page=360')}>publication</a> ;
-    <br/> • Calculus tutor for 1 year;
-    <br/> • Linear Algebra and Analytic Geometry tutor 0,5 year;</p></>,
+    name: 'Federal Technological University of Parana',
+    course: 'Mechanical engineering',
+    location: 'Londrina, Parana - Brazil',
+    acc: ['A1 International Journal Scientific ', 'National Congress publication', 'Calculus tutor for 1 year', 'Linear Algebra and Analytic Geometry tutor 0,5 year'],
     url: require('../../assets/UTFPR2.jpg'),
     duration: '2014 - 2019'
   },
@@ -22,7 +19,7 @@ const education = [
     name: 'Greystone College',
     course: 'International Business Management',
     location: 'Montreal, QC - Canada',
-    acc: 'N/A',
+    acc: [],
     url: require('../../assets/GC.png'),
     duration: '2022 - 2023'
   }]

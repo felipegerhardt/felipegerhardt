@@ -1,5 +1,7 @@
-import React, { ReactElement } from 'react'
-import './index.css'
+import React, { ReactElement } from 'react';
+import { MdLocationOn } from 'react-icons/md';
+import { BsFillCalendar3RangeFill } from 'react-icons/bs';
+import './index.css';
 
 const EducationCard = ({
   name,
@@ -11,22 +13,40 @@ const EducationCard = ({
   name:string;
   course: string;
   location: string;
-  acc: string | ReactElement;
+  acc: Array<string>;
   url: string;
   duration: string;
 }) => {
 
 
   return (
-    <div className='one__education__card__container'>
+    <div className='education-card'>
 
-      <img alt='Institution logo' src={url} width={400} className='education__image'/>
+      <div className="education-name-course">
+        <p className='education-name'>{name} </p>
+        <p className='education-course'>({course})</p>
+      </div>
+      
+      <div className="education-name-course">
+        <MdLocationOn className='education-location-icon' size={20} color='white'/>
+        <p className='education-location'>{location}</p>
+        <BsFillCalendar3RangeFill className='education-duration-icon' size={20} color='white'/>
+        <p className='education-duration'>{duration}</p>
+      </div>
 
-      <p className='education__name'>{name}</p>
-      <p className='education__course'>{course}</p>
-      <p className='education__text'>Location: {location}</p>
-      <p className='education__text'>Duration: {duration}</p>
-      <text className='education__text'>Accomplishments: <br/><br/>{acc}</text>
+      <div className="education-accomplishment-container">
+        <p className="education-accomplishment-header">Accomplishments: </p>
+        <div className="education-accomplishments">
+
+          {acc.map((accomplishment) => 
+          <div className="education-accomplishment-layout">
+            <text className='education-accomplishment-item'>{accomplishment}</text>
+          </div>
+          
+          )}
+        </div>
+        
+      </div>
 
 
     </div>
