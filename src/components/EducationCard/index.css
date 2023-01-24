@@ -65,10 +65,14 @@
 }
 
 .education-accomplishment-layout {
+  display: flex;
   width: 100%;
   height: 70px;
   margin-left: 10px;
   margin-right: 10px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   padding-left: 10px;
   padding-right: 10px;
 
@@ -125,6 +129,11 @@
   .education-accomplishment-item {
     color: white;
     font-size: 2vmax;
+  }
+
+  .education-accomplishment-layout {
+    margin-top: 15px;
+    margin-bottom: 15px;
   }
 
   .education-course {
