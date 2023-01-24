@@ -113,12 +113,12 @@
   width: 100%;
   height: 100%;
   justify-content: flex-start;
-  align-items: flex-end;
+  align-items: center;
   padding-left: 10%;
   padding-bottom: 10%;
   margin-top: 10px;
   transition: ease-in-out 300ms;
-  color: rgba(255, 255, 255, 0);
+  color: rgba(255, 255, 255, 0);;
 
 }
 

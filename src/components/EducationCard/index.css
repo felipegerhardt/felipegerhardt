@@ -49,11 +49,12 @@
 
 .education-accomplishment-container {
   display: flex;
+  height:  100%;
   flex-direction: column;
 }
 .education-accomplishment-header {
   color: white;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .education-accomplishments {
@@ -61,7 +62,8 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin-top: 12px;
+  margin-top: 20px;
+  padding-top: 50px;
 }
 
 .education-accomplishment-layout {
@@ -80,6 +82,26 @@
   border-width: 0.5px;
   border-style: solid;
   border-radius: 10px;
+  
+}
+
+
+.education-accomplishment-layout.clickable {
+
+  border-color: white;
+  border-width: 0.5px;
+  border-style: solid;
+  border-radius: 10px;
+  transition: all ease-in-out 200ms;
+  box-shadow: 0 0 10px white;
+  cursor: pointer;
+  
+
+}
+
+
+.education-accomplishment-layout.clickable:hover{
+  scale: 1.02
   
 }
 

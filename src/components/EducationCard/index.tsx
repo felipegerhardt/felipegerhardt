@@ -8,13 +8,11 @@ const EducationCard = ({
   course, 
   location, 
   acc,
-  url,
   duration}:{
   name:string;
   course: string;
   location: string;
-  acc: Array<string>;
-  url: string;
+  acc: Array<object>;
   duration: string;
 }) => {
 
@@ -35,20 +33,19 @@ const EducationCard = ({
       </div>
 
       <div className="education-accomplishment-container">
+        
         <p className="education-accomplishment-header">Accomplishments: </p>
         <div className="education-accomplishments">
 
-          {acc.map((accomplishment) => 
-          <div className="education-accomplishment-layout">
-            <text className='education-accomplishment-item'>{accomplishment}</text>
+          {acc.map((accomplishment:any) => 
+          <div onClick={() => !!accomplishment.url ? window.open(accomplishment.url) : null} className={!!accomplishment.url ? "education-accomplishment-layout clickable" : 'education-accomplishment-layout'}>
+            <text className='education-accomplishment-item'>{accomplishment.description}</text>
           </div>
           
           )}
         </div>
         
       </div>
-
-
     </div>
   )
 }

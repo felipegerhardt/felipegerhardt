@@ -44,7 +44,7 @@ const Projects = () => {
     <div className='projects-container'>
       <p data-aos="fade" className='section-header' id='Projects'> Projects </p>
 
-      <div className='projects-card-container'> 
+      <div data-aos="fade" className='projects-card-container'> 
 
         {projects.map((project) => 
             <ProjectsCard 
