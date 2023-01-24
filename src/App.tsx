@@ -14,7 +14,6 @@ const App = () => {
       <Projects />
       <Education />
     </div>
-
   )
 }
 
