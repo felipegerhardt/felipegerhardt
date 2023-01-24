@@ -5,7 +5,7 @@ import { ToastContainer } from 'material-react-toastify';
 import 'material-react-toastify/dist/ReactToastify.css';
 import { useTransition, animated } from 'react-spring';
 
-const links = ['About me', 'Technologies', 'Projects', 'Experiences', 'Education'];
+const links = ['About me', 'Technologies', 'Projects', 'Education'];
 
 const Navbar = () => {
 

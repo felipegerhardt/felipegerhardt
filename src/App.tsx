@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 
 
-import { AboutMe, Projects, Education, Technologies, WorkExperience } from './containers'
+import { AboutMe, Projects, Education, Technologies } from './containers'
 import { Navbar } from './components';
 
 const App = () => {
@@ -12,7 +12,6 @@ const App = () => {
       <AboutMe />
       <Technologies />      
       <Projects />
-      <WorkExperience />
       <Education />
     </div>
 

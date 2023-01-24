@@ -12,6 +12,7 @@ const TechCard = ({
   source: string;
   frameworks:Array<object>;
 }) => {
+
   const [toggle, setToggle] = useState(true);
 
   function handleClick () {
@@ -24,9 +25,10 @@ const TechCard = ({
       <h1 className='card-header'>{technology}</h1>
       <div className={toggle ? 'frameworks-container': 'frameworks-container activated'}>
         <div className={toggle ? 'frameworks-content' : 'frameworks-content activated'}>
-          {frameworks.map((framework) => 
+          {frameworks.map((framework:any) => 
           
-          <p>• a</p>
+          <div className='skill-list'>• {framework}</div>
+          
           )}
         </div>
       </div>

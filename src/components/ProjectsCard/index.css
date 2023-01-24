@@ -87,6 +87,7 @@
 
 .project-description-container.activated {
   height: 100%;
+  justify-content: flex-start;
   
 }
 
@@ -99,6 +100,7 @@
   transition: ease-in-out 300ms;
   font-size: 12px;
   text-align: left;
+  padding-top: 5%;
 }
 
 .project-description.activated {
@@ -109,12 +111,14 @@
   display: flex;
   flex-direction: row;
   width: 100%;
+  height: 100%;
   justify-content: flex-start;
-  align-items: center;
-  margin-left: 20%;
+  align-items: flex-end;
+  padding-left: 10%;
+  padding-bottom: 10%;
   margin-top: 10px;
   transition: ease-in-out 300ms;
-  color: rgba(255, 255, 255, 0)
+  color: rgba(255, 255, 255, 0);
 
 }
 
@@ -231,6 +235,7 @@
 
 
   .project-description {
+    padding-top: 10%;
     font-size: medium;
   }
 

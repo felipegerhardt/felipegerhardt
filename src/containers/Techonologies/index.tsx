@@ -14,22 +14,22 @@ const technologies = [
   {name:'React.js',
   url: 'https://github.com/felipegerhardt/felipegerhardt',
   source: RJ,
-  frameworks: ['','','','']},
+  frameworks: ['TypeScript','Next.js','Tailwind', 'Component-based architecture', 'Version control (Git)']},
 
   {name:'React Native',
   url: 'https://github.com/felipegerhardt/Learn.public',
   source: RN,
-  frameworks:  ['','','','']},
+  frameworks:  ['Layout, navigation and user interactions','Expo','Component-based architecture', 'Version control (Git)']},
  
   {name:'Python',
   url: 'https://github.com/felipegerhardt/kinematics-of-a-space-robot',
   source: PY,
-  frameworks:  ['','','',''],},
+  frameworks:  ['Object oriented programming classes and objects','Libraries such as Numpy, Pandas, Matplotlib and Kivy','Version control (Git)'],},
 
   {name:'Power BI',
   url: 'https://github.com/felipegerhardt',
   source: PB,
-  frameworks: ['','','',''] }]
+  frameworks: ['Data visualization and data storytelling principles','Creation of effective and engaging visualizations','Knowledge of Power BIs DAX language'] }]
 
 const Techonologies = () => {
   
