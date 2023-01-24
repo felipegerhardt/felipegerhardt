@@ -1,19 +1,17 @@
 {
   "files": {
-    "main.css": "/felipegerhardt/static/css/main.1cf3e55e.css",
-    "main.js": "/felipegerhardt/static/js/main.948d7959.js",
-    "static/media/GC.png": "/felipegerhardt/static/media/GC.c8c776c1bb32c5fd810d.png",
-    "static/media/UTFPR2.jpg": "/felipegerhardt/static/media/UTFPR2.7f6723e3e1cd6c438e74.jpg",
+    "main.css": "/felipegerhardt/static/css/main.3e22c288.css",
+    "main.js": "/felipegerhardt/static/js/main.94b3c55d.js",
     "static/media/PB.svg": "/felipegerhardt/static/media/PB.1cc8633a8757c7af7f517bc9c7a8a5b9.svg",
     "static/media/RJ.svg": "/felipegerhardt/static/media/RJ.5ab5f11888fe2e6ee7156ae4512fc52e.svg",
     "static/media/PY.svg": "/felipegerhardt/static/media/PY.fa32a0b021250dffbf5500ec85eacbd9.svg",
     "static/media/RN.svg": "/felipegerhardt/static/media/RN.8618f777152c84d97b94b954d8ae77fe.svg",
     "index.html": "/felipegerhardt/index.html",
-    "main.1cf3e55e.css.map": "/felipegerhardt/static/css/main.1cf3e55e.css.map",
-    "main.948d7959.js.map": "/felipegerhardt/static/js/main.948d7959.js.map"
+    "main.3e22c288.css.map": "/felipegerhardt/static/css/main.3e22c288.css.map",
+    "main.94b3c55d.js.map": "/felipegerhardt/static/js/main.94b3c55d.js.map"
   },
   "entrypoints": [
-    "static/css/main.1cf3e55e.css",
-    "static/js/main.948d7959.js"
+    "static/css/main.3e22c288.css",
+    "static/js/main.94b3c55d.js"
   ]
 }
